@@ -1,8 +1,4 @@
 {
   "debug.node.autoAttach": "on",
   "debug.javascript.usePreviewAutoAttach": false,
-  "jest.pathToConfig": "/mnt/d/Code/smart-canteen-admin/server/jest.config.js",
-  "jestrunner.configPath": "/mnt/d/Code/smart-canteen-admin/server/jest-config.json",
-  "jestrunner.jestPath": "/mnt/d/Code/smart-canteen-admin/server/node_modules/jest/bin/jest.js",
-  "jest.pathToJest": "/mnt/d/Code/smart-canteen-admin/server/node_modules/.bin/jest"
 }
