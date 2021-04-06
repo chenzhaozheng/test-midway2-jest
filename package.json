@@ -1,0 +1,78 @@
+{
+  "name": "smart-canteen-admin-server",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.5",
+    "@grpc/proto-loader": "^0.5.6",
+    "@midwayjs/decorator": "^2.3.0",
+    "@midwayjs/orm": "^1.3.0",
+    "@midwayjs/swagger": "^1.0.3",
+    "@midwayjs/web": "^2.3.0",
+    "archiver": "^5.1.0",
+    "async": "^3.2.0",
+    "await-stream-ready": "^1.0.1",
+    "csv-writer": "^1.6.0",
+    "egg": "^2.0.0",
+    "egg-assets": "^1.0.8",
+    "egg-cors": "^2.2.3",
+    "egg-jwt": "^3.1.7",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.10.0",
+    "egg-view-assets": "^1.6.1",
+    "egg-view-nunjucks": "^2.2.0",
+    "grpc": "^1.24.4",
+    "highlight.js": "^10.4.0",
+    "md5": "^2.3.0",
+    "midway": "^2.3.0",
+    "mysql2": "^2.2.5",
+    "pg": "^8.5.1",
+    "pinyin": "^2.9.1",
+    "qr-image": "^3.2.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@midwayjs/cli": "^1.0.0",
+    "@midwayjs/egg-ts-helper": "^1.0.1",
+    "@midwayjs/mock": "^2.3.0",
+    "@types/jest": "^26.0.22",
+    "@types/node": "14",
+    "cross-env": "^6.0.0",
+    "jest": "^26.6.3",
+    "mwts": "^1.0.5",
+    "swagger-ui-dist": "^3.37.2",
+    "ts-jest": "^26.5.4",
+    "typescript": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --title=smart-canteen-admin-server --framework=midway --env=dev  --daemon",
+    "stop": "egg-scripts stop --title=smart-canteen-admin-server",
+    "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts",
+    "build": "midway-bin build -c",
+    "build-start": "npm run build && cross-env ets && cross-env MIDWAY_SERVER_ENV=dev midway-bin dev --ts",
+    "client-dev": "cross-env ets && cross-env MIDWAY_SERVER_ENV=client midway-bin dev --ts",
+    "client-start": "cd .. && npm run client-start-nomock",
+    "test": "midway-bin test --ts",
+    "cov": "midway-bin cov --ts",
+    "lint": "mwts check",
+    "lint:fix": "mwts fix",
+    "ci": "npm run cov"
+  },
+  "midway-bin-clean": [
+    ".vscode/.tsbuildinfo",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "anonymous",
+  "license": "MIT",
+  "jest": {
+    "verbose": true
+  }
+}
